@@ -67,6 +67,8 @@ window.onload = function() {
     bottomPipeImg.src = "img/bottompipe.png";
 
 
+    placePipes();
+
 
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds
