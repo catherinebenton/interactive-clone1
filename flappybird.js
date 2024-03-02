@@ -1,8 +1,8 @@
 
 // board
 let board;
-let boardWidth = 360;
-let boardHeight = 640;
+let boardWidth = window.innerWidth;
+let boardHeight = window.innerHeight;
 let context;
 
 //bird
@@ -99,7 +99,7 @@ function update() {
         bubble.y -= 3; // Adjust the bubble speed
         context.beginPath();
         context.arc(bubble.x, bubble.y, bubble.size, 0, 2 * Math.PI);
-        context.fillStyle = "rgba(255, 255, 255, 0.5)"; // Adjust bubble color and transparency
+        context.fillStyle = "rgba(255, 255, 255, 0.3)"; // Adjust bubble color and transparency
         context.fill();
         context.stroke();
     
@@ -214,3 +214,4 @@ function placePipes() {
            a.y< b.y + b.height &&
            a.y + a.height > b.y;
  }
+
