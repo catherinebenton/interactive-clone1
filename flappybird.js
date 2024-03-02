@@ -67,6 +67,7 @@ window.onload = function() {
     bottomPipeImg.src = "img/bottompipe.png";
 
 
+
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds
     document.addEventListener("keydown", function (e){
@@ -211,7 +212,7 @@ function placePipes() {
  function detectCollision(a,b) {
     return a.x < b.x + b.width &&
            a.x + a.width > b.x &&
-           a.y< b.y + b.height &&
+           a.y < b.y + b.height &&
            a.y + a.height > b.y;
  }
 
