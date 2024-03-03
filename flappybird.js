@@ -140,12 +140,17 @@ function update() {
     //score
     context.fillStyle = "white";
     context.font = "45px sans-serif";
-    context.fillText(score, 5, 45);
+    context.fillText(score, 10 , 45);
 
+    
     if(gameOver){
-        context.fillText("GAME OVER", 5, 90)
+        // context.fillText("GAME OVER", 5, 90)
+        context.textAlign = "center";
+        context.fillText("GAME OVER", board.width / 2, board.height / 2);
+        context.textAlign = "left"; // Reset text alignment to default
     }
 }
+
 
 function placePipes() {
     if(gameOver){
